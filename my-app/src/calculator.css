@@ -1,6 +1,6 @@
 .calculator {
     width: 400px;
-    height: 500px;
+    height: 550px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -8,9 +8,12 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 50px auto;
+    padding: 20px;
+    align-items: center;
   }
   
   .display {
+    width: 100%;
     background: #222;
     color: #fff;
     font-size: 2em;
@@ -48,7 +51,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 20px;
+    /* padding: 20px; */
+    width: 100%;
   }
   
   .key {

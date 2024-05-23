@@ -21,7 +21,7 @@ function Keys({ keyList, onButtonClick }) {
 function Calculator (){
 
     const [display, setDisplay] = useState("0")
-    const keysList = ["7","8","9","/","4","5","6","*","1","2","3","-","0",".","=","+"]
+    const keysList = ["7","8","9","/","4","5","6","*","1","2","3","-","0",".","=","+","%"]
 
     function handleButtonClick(keyItem){
         if (keyItem === "="){
@@ -34,9 +34,19 @@ function Calculator (){
                 setDisplay("Error");
               }            
         }
-        if (display === "0"){ setDisplay(keyItem)}
+        else if (keyItem==="%"){
+            try {
+                const result = eval(display)/100
+                setDisplay(result.toString());
+            } catch (error) {
+                setDisplay("Error")
+            }
+        }
         else{
-        setDisplay(display+keyItem)}
+            if (display === "0"){ setDisplay(keyItem)}
+            else{
+            setDisplay(display+keyItem)}
+        }
     }
 
     function handleClear(){
