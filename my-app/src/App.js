@@ -1,5 +1,6 @@
 import Calculator from './Calculator';
 import './App.css';
+import Footer from './Footer';
 
 // function App() {
 //   return (
@@ -24,7 +25,10 @@ import './App.css';
 
 function App(){
   return(
+    <>
     <Calculator/>
+    <Footer/>
+    </>
   )
 }
 
